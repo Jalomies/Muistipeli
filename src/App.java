@@ -23,6 +23,13 @@ public class App {
         System.out.print(arvotutNumerot[i]+" ");
        }
 
+       try {
+         Thread.sleep(3000); 
+         } catch(InterruptedException ex) {
+             Thread.currentThread().interrupt();
+            }
+
+        for (int i = 0; i < 20; ++i) System.out.println();
 
 
        for (int i = 0; i < arvotutNumerot.length; i++) {
@@ -39,7 +46,7 @@ public class App {
        }
        System.out.println("Oikeat numerot olivat:");
        for (int i = 0; i < arvotutNumerot.length; i++) {
-        System.out.print(arvotutNumerot[i]+" ");
+        System.out.print(" "+arvotutNumerot[i]);
        }
 
        System.out.println("\nSinun numerosi olivat:");
@@ -47,7 +54,7 @@ public class App {
         System.out.print(" "+syotetytNumerot[i]);
        }
 
-       System.out.println("\nSait "+oikeinMaara+" oikein.");
+       System.out.println("\nSait "+oikeinMaara+"/"+syotetytNumerot.length+" oikein.");
 
 
 
